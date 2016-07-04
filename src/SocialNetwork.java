@@ -53,9 +53,13 @@ public class SocialNetwork {
 
 
     public void añadirParejaAmigos(Persona persona, Persona p2) {
+
+
     }
 
     public Set<Persona> getAmigos(Persona persona) {
+
+
         return null;
     }
 

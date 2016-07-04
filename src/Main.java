@@ -32,6 +32,22 @@ public class Main {
         System.out.println("Consultar persona por nombre: ");
         System.out.println("Nombre 1" + socialNetwork.getPersona("Cristina"));
 
+        socialNetwork.añadirPareja(cristina, juan);
+        socialNetwork.añadirPareja(ana, marc);
+        socialNetwork.añadirPareja(pedro, antonio);
+
+        System.out.println("La pareja de Cristina es : " + socialNetwork.getPareja(cristina));
+        System.out.println("La pareja de Juan es : " + socialNetwork.getPareja(juan));
+
+        System.out.println("La pareja de ana es : " + socialNetwork.getPareja(ana));
+        System.out.println("La pareja de marc es : " + socialNetwork.getPareja(marc));
+
+        System.out.println("La pareja de Pedro  es : " + socialNetwork.getPareja(pedro));
+        System.out.println("La pareja de Antonio es : " + socialNetwork.getPareja(antonio));
+
+
+
+
 
 
 
