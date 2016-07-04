@@ -5,12 +5,9 @@ import java.util.*;
 
 public class Main {
 
-    static Map<String, Persona> gente = new HashMap<>();
-    static BiMap<Persona, Persona> parejas = HashBiMap.create();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Persona> personaList = new ArrayList<>();
 
 
         Persona cristina = new Persona(1L, "Cristina", "Duran");
@@ -20,20 +17,25 @@ public class Main {
         Persona antonio = new Persona(5L, "Antonio", "Martinez");
         Persona pedro = new Persona(6L, "Pedro", "Gonzalez");
         Persona pau = new Persona(7L, "Pau", "Claris");
-        gente.put("Cristina", cristina);
-        gente.put("Juan", juan);
-        gente.put("Ana", ana);
-        gente.put("Marc", marc);
-        gente.put("Antonio", antonio);
-        gente.put("Pedro", pedro);
-        gente.put("Pau", pau);
 
-        parejas.put(cristina, juan);
-        parejas.put(ana, marc);
+        SocialNetwork socialNetwork = new SocialNetwork();
+        socialNetwork.añadirPersona(cristina);
+        socialNetwork.añadirPersona(juan);
+        socialNetwork.añadirPersona(ana);
+        socialNetwork.añadirPersona(marc);
+        socialNetwork.añadirPersona(antonio);
+        socialNetwork.añadirPersona(pedro);
+        socialNetwork.añadirPersona(pau);
+        System.out.println("Consultar personas por id: ");
+        System.out.println("Id 1: " + socialNetwork.getPersona(1L));
+
+        System.out.println("Consultar persona por nombre: ");
+        System.out.println("Nombre 1" + socialNetwork.getPersona("Cristina"));
 
 
-        parejas.put(antonio, pedro);
-        System.out.println("parejas:");
+
+
+       /* System.out.println("parejas:");
         System.out.println(parejas);
 
 
@@ -56,17 +58,10 @@ public class Main {
     }
 
     private static Persona getPareja(Persona persona) {
-        Persona pareja = parejas.get(persona);
-        if (pareja != null) {
-            return pareja;
+
+    }*/
 
 
-        } else {
-            pareja = parejas.inverse().get(persona);
-            return pareja;
-        }
     }
-
-
 
 }
