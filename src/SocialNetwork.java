@@ -109,6 +109,8 @@ public class SocialNetwork {
 
 
     public Set<Persona> getAmigosPareja(Persona persona) {
+
+
         return null;
     }
 

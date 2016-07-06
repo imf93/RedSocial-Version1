@@ -51,7 +51,7 @@ public class Main {
         socialNetwork.añadirAmigos(cristina, pedro);
         socialNetwork.añadirAmigos(pedro, juan);
         socialNetwork.añadirAmigos(pedro, antonio);
-        socialNetwork.añadirAmigos(pedro, cristina);
+        //  socialNetwork.añadirAmigos(pedro, cristina);
 
         socialNetwork.añadirAmigos(pedro, julia);
         socialNetwork.añadirAmigos(julia, carol);
@@ -70,7 +70,17 @@ public class Main {
         System.out.println("La pareja de Pedro  es : " + socialNetwork.getPareja(pedro));
         System.out.println("La pareja de Antonio es : " + socialNetwork.getPareja(antonio));
 
-        System.out.println("El amigo de Juan es : " + socialNetwork.getAmigos(juan));
+        System.out.println("Los amigos de Juan son : " + socialNetwork.getAmigos(juan));
+        System.out.println("Los amigos de Cristina son : " + socialNetwork.getAmigos(cristina));
+        System.out.println("Los amigos de Pedro son : " + socialNetwork.getAmigos(pedro));
+        System.out.println("Los amigos de Julia son : " + socialNetwork.getAmigos(julia));
+        System.out.println("Los amigos de Marc son : " + socialNetwork.getAmigos(marc));
+        System.out.println("Los amigos de Antonio son : " + socialNetwork.getAmigos(antonio));
+        System.out.println("Los amigos de Ana son : " + socialNetwork.getAmigos(ana));
+
+
+
+
 
 
 
