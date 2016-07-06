@@ -76,7 +76,9 @@ public class Main {
         System.out.println("Los amigos de Julia son : " + socialNetwork.getAmigos(julia));
         System.out.println("Los amigos de Marc son : " + socialNetwork.getAmigos(marc));
         System.out.println("Los amigos de Antonio son : " + socialNetwork.getAmigos(antonio));
-        System.out.println("Los amigos de Ana son : " + socialNetwork.getAmigos(ana));
+        System.out.println("Los amigos de Carol son : " + socialNetwork.getAmigos(carol));
+        System.out.println("Los amigos de ana son : " + socialNetwork.getAmigos(ana));
+
 
 
 
