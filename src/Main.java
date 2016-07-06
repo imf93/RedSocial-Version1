@@ -17,7 +17,10 @@ public class Main {
         Persona antonio = new Persona(5L, "Antonio", "Martinez");
         Persona pedro = new Persona(6L, "Pedro", "Gonzalez");
         Persona pau = new Persona(7L, "Pau", "Claris");
+        Persona julia = new Persona(8L, "Julia", "Perez");
+        Persona carol = new Persona(9L, "Carol", "Palomares");
 
+        //Añadir a las personas
         SocialNetwork socialNetwork = new SocialNetwork();
         socialNetwork.añadirPersona(cristina);
         socialNetwork.añadirPersona(juan);
@@ -26,15 +29,37 @@ public class Main {
         socialNetwork.añadirPersona(antonio);
         socialNetwork.añadirPersona(pedro);
         socialNetwork.añadirPersona(pau);
+
+
         System.out.println("Consultar personas por id: ");
         System.out.println("Id 1: " + socialNetwork.getPersona(1L));
 
         System.out.println("Consultar persona por nombre: ");
         System.out.println("Nombre 1" + socialNetwork.getPersona("Cristina"));
 
+        //Añadir a las parejas
+
         socialNetwork.añadirPareja(cristina, juan);
         socialNetwork.añadirPareja(ana, marc);
-        socialNetwork.añadirPareja(pedro, antonio);
+        socialNetwork.añadirPareja(antonio, pedro);
+        //   socialNetwork.añadirPareja(julia,pedro);
+
+
+        //Añadir a los amigos
+
+
+        socialNetwork.añadirAmigos(cristina, pedro);
+        socialNetwork.añadirAmigos(pedro, juan);
+        socialNetwork.añadirAmigos(pedro, antonio);
+        socialNetwork.añadirAmigos(pedro, cristina);
+
+        socialNetwork.añadirAmigos(pedro, julia);
+        socialNetwork.añadirAmigos(julia, carol);
+        socialNetwork.añadirAmigos(julia, ana);
+        socialNetwork.añadirAmigos(ana, antonio);
+        socialNetwork.añadirAmigos(antonio, marc);
+        socialNetwork.añadirAmigos(marc, juan);
+        socialNetwork.añadirAmigos(juan, antonio);
 
         System.out.println("La pareja de Cristina es : " + socialNetwork.getPareja(cristina));
         System.out.println("La pareja de Juan es : " + socialNetwork.getPareja(juan));
@@ -45,18 +70,18 @@ public class Main {
         System.out.println("La pareja de Pedro  es : " + socialNetwork.getPareja(pedro));
         System.out.println("La pareja de Antonio es : " + socialNetwork.getPareja(antonio));
 
+        System.out.println("El amigo de Juan es : " + socialNetwork.getAmigos(juan));
 
 
 
 
-
-
-       /* System.out.println("parejas:");
+/*
+        System.out.println("parejas:");
         System.out.println(parejas);
 
 
-        System.out.println("La pareja de Cristina es: " + parejas.get(cristina));
-        System.out.println("La pareja de juan es:" + parejas.inverse().get(juan));
+        System.out.println("La pareja de Cristina es: " + getPareja(cristina));
+        System.out.println("La pareja de juan es:" + getPareja().inverse();
 
 
         System.out.println("Introduce el nombre de la persona: ");

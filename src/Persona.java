@@ -1,8 +1,8 @@
 /**
  * Created by professor on 04/07/2016.
  */
-public class Persona {
-    private long id;
+public class Persona implements Comparable<Persona> {
+    private Long id;
     private String nombre;
     private String apellido;
 
@@ -43,7 +43,7 @@ public class Persona {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                '}'+System.lineSeparator();
+                '}';
     }
 
     @Override
@@ -65,5 +65,12 @@ public class Persona {
         result = 31 * result + getNombre().hashCode();
         result = 31 * result + getApellido().hashCode();
         return result;
+    }
+
+    @Override
+    public int compareTo(Persona persona) {
+
+        // return (this.id.compareTo(id.matricula));
+        return (this.id.compareTo(persona.id));
     }
 }
