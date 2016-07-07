@@ -16,9 +16,9 @@ public class Main {
         Persona marc = new Persona(4L, "Marc", "Fuentes");
         Persona antonio = new Persona(5L, "Antonio", "Martinez");
         Persona pedro = new Persona(6L, "Pedro", "Gonzalez");
-        Persona pau = new Persona(7L, "Pau", "Claris");
-        Persona julia = new Persona(8L, "Julia", "Perez");
-        Persona carol = new Persona(9L, "Carol", "Palomares");
+
+        Persona julia = new Persona(7L, "Julia", "Perez");
+        Persona carol = new Persona(8L, "Carol", "Palomares");
 
         //Añadir a las personas
         SocialNetwork socialNetwork = new SocialNetwork();
@@ -28,7 +28,9 @@ public class Main {
         socialNetwork.añadirPersona(marc);
         socialNetwork.añadirPersona(antonio);
         socialNetwork.añadirPersona(pedro);
-        socialNetwork.añadirPersona(pau);
+        socialNetwork.añadirPersona(carol);
+        socialNetwork.añadirPersona(julia);
+
 
 
         System.out.println("Consultar personas por id: ");
@@ -49,7 +51,7 @@ public class Main {
 
 
         socialNetwork.añadirAmigos(cristina, pedro);
-        socialNetwork.añadirAmigos(pedro, antonio);
+
         //  socialNetwork.añadirAmigos(pedro, cristina);
 
         socialNetwork.añadirAmigos(pedro, julia);
@@ -92,7 +94,16 @@ public class Main {
 
         //Numero de amigos
 
-        System.out.println("El numero de amigos de Juan son: " + socialNetwork.getNumerodeamigos(juan) + socialNetwork.getAmigos(juan));
+        System.out.println("El numero de amigos de Antonio son: " + socialNetwork.getNumerodeamigos(antonio));
+        System.out.println("El numero de amigos de Pedro son: " + socialNetwork.getNumerodeamigos(pedro));
+        System.out.println("El numero de amigos de Marc son: " + socialNetwork.getNumerodeamigos(marc));
+        System.out.println("El numero de amigos de Ana son: " + socialNetwork.getNumerodeamigos(ana));
+        System.out.println("El numero de amigos de Juan son: " + socialNetwork.getNumerodeamigos(juan));
+        System.out.println("El numero de amigos de Cristina son: " + socialNetwork.getNumerodeamigos(cristina));
+        System.out.println("El numero de amigos de Julia son: " + socialNetwork.getNumerodeamigos(julia));
+        System.out.println("El numero de amigos de Carol son: " + socialNetwork.getNumerodeamigos(carol));
+
+
 
 
         System.out.println("Popularidad" + socialNetwork.gentemasPopular(cristina));

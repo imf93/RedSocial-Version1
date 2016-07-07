@@ -43,7 +43,7 @@ public class Persona implements Comparable<Persona> {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                '}';
+                '}' + System.lineSeparator();
     }
 
     @Override
