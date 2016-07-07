@@ -111,6 +111,16 @@ public class SocialNetwork {
     public Set<Persona> getAmigosPareja(Persona persona) {
 
 
+        Persona pareja = getPareja(persona);
+        if (pareja == null) {
+
+            System.out.println("La persoma" + persona.getNombre() + "no tiene pareja");
+
+        } else {
+            return getAmigos(pareja);
+        }
+
+
         return null;
     }
 

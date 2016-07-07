@@ -80,6 +80,11 @@ public class Main {
         System.out.println("Los amigos de ana son : " + socialNetwork.getAmigos(ana));
 
 
+        System.out.println("Los amigos de la pareja de Juan son: " + socialNetwork.getAmigosPareja(juan));
+        System.out.println("Los amigos de la pareja de Ana son: " + socialNetwork.getAmigosPareja(ana));
+        System.out.println("Los amigos de la pareja de pedro son" + socialNetwork.getAmigosPareja(pedro));
+        //Prueba para comprobar que no tiene pareja
+        System.out.println("Los amigos de la pareja de carol son: " + socialNetwork.getAmigosPareja(carol));
 
 
 
