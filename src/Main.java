@@ -31,7 +31,7 @@ public class Main {
         socialNetwork.añadirPersona(carol);
         socialNetwork.añadirPersona(julia);
 
-
+//cambios
 
         System.out.println("Consultar personas por id: ");
         System.out.println("Id 1: " + socialNetwork.getPersona(1L));
