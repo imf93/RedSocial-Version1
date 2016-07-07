@@ -49,7 +49,6 @@ public class Main {
 
 
         socialNetwork.añadirAmigos(cristina, pedro);
-        socialNetwork.añadirAmigos(pedro, juan);
         socialNetwork.añadirAmigos(pedro, antonio);
         //  socialNetwork.añadirAmigos(pedro, cristina);
 
@@ -86,10 +85,14 @@ public class Main {
         //Prueba para comprobar que no tiene pareja
         System.out.println("Los amigos de la pareja de carol son: " + socialNetwork.getAmigosPareja(carol));
 
+//Muestra la pareja de los amigos
+        System.out.println("La pareja de los amigos de Julia son: " + socialNetwork.getParejadeAmigos(julia));
+        System.out.println("La pareja de los amigos de Juan son: " + socialNetwork.getParejadeAmigos(juan));
 
 
+        //Numero de amigos
 
-
+        System.out.println("El numero de amigos de Juan son: " + socialNetwork.getNumerodeamigos(juan));
 
 
 /*

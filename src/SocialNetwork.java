@@ -124,10 +124,31 @@ public class SocialNetwork {
         return null;
     }
 
-    public Set<Persona> getAmigosdeCadaUno(Persona persona) {
-        return null;
+    public Set<Persona> getParejadeAmigos(Persona persona) {
+        Set<Persona> amigos = getAmigos(persona);
+        Set<Persona> parejas = new HashSet<>();
 
+        for (Persona amigo : amigos) {
+
+            Persona pareja = getPareja(amigo);
+
+            if (pareja != null) {
+
+                parejas.add(pareja);
+            }
+        }
+
+        return parejas;
     }
+
+
+    public Integer getNumerodeamigos(Persona persona) {
+        return getAmigos(persona).size();
+    }
+
+            
+
+
 
     public Set<Persona> gentemasPopular(Persona persona) {
         return null;
