@@ -161,7 +161,7 @@ public class SocialNetwork {
                     return 1;
                 }
                 if (numeroamigos1 > numeroamigos2) {
-                    return 2;
+                    return -1;
                 } else return 0;
             }
 
