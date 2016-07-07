@@ -1,5 +1,4 @@
 import com.google.common.collect.*;
-import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
 
@@ -143,15 +142,33 @@ public class SocialNetwork {
 
 
     public Integer getNumerodeamigos(Persona persona) {
+
         return getAmigos(persona).size();
     }
 
-            
+
+    public List<Persona> gentemasPopular(Persona persona) {
+
+        List<Persona> listaPersona = new ArrayList<>(gentePorNombre.values());
+        Collections.sort(listaPersona, new Comparator<Persona>() {
+            @Override
+            public int compare(Persona persona, Persona p2) {
+
+                int numeroamigos1 = getNumerodeamigos(persona);
+                int numeroamigos2 = getNumerodeamigos(p2);
+
+                if (numeroamigos1 < numeroamigos2) {
+                    return 1;
+                }
+                if (numeroamigos1 > numeroamigos2) {
+                    return 2;
+                } else return 0;
+            }
 
 
+        });
 
-    public Set<Persona> gentemasPopular(Persona persona) {
-        return null;
+        return listaPersona;
     }
 
     public int gradodeConexionPath(Persona persona, Persona p2) {

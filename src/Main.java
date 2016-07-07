@@ -92,7 +92,10 @@ public class Main {
 
         //Numero de amigos
 
-        System.out.println("El numero de amigos de Juan son: " + socialNetwork.getNumerodeamigos(juan));
+        System.out.println("El numero de amigos de Juan son: " + socialNetwork.getNumerodeamigos(juan) + socialNetwork.getAmigos(juan));
+
+
+        System.out.println("Popularidad" + socialNetwork.gentemasPopular(cristina));
 
 
 /*
