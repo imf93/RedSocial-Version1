@@ -1,6 +1,4 @@
-/**
- * Created by professor on 04/07/2016.
- */
+
 public class Persona implements Comparable<Persona> {
     private Long id;
     private String nombre;

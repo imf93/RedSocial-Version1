@@ -2,9 +2,7 @@ import com.google.common.collect.*;
 
 import java.util.*;
 
-/**
- * Created by professor on 04/07/2016.
- */
+
 public class SocialNetwork {
     private Map<String, Persona> gentePorNombre = new HashMap<>();
     private Map<Long, Persona> gentePorid = new HashMap<>();
