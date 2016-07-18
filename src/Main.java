@@ -108,33 +108,8 @@ public class Main {
 
         System.out.println("Popularidad" + socialNetwork.gentemasPopular(cristina));
 
+        System.out.println("El grado de conexión entre Juan y Carol es: " + socialNetwork.getExisteConexion(juan, carol));
 
-/*
-        System.out.println("parejas:");
-        System.out.println(parejas);
-
-
-        System.out.println("La pareja de Cristina es: " + getPareja(cristina));
-        System.out.println("La pareja de juan es:" + getPareja().inverse();
-
-
-        System.out.println("Introduce el nombre de la persona: ");
-        String nombre = sc.next();
-        Persona persona = gente.get(nombre);
-        Persona pareja=getPareja(persona);
-
-        if(pareja==null) {
-            System.out.println("La persona " + nombre + " no tiene pareja");
-        }
-        else {
-            System.out.println("La pareja de " + nombre + " es : " + pareja);
-        }
-
-    }
-
-    private static Persona getPareja(Persona persona) {
-
-    }*/
 
 
     }

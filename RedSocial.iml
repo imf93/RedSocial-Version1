@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Java/guava-19.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../guava-19.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

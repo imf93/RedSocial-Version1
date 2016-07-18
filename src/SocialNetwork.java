@@ -171,12 +171,36 @@ public class SocialNetwork {
         return listaPersona;
     }
 
-    public int gradodeConexionPath(Persona persona, Persona p2) {
-        return 0;
+    public boolean getExisteConexion(Persona persona, Persona otraPersona) { //Solo sabemos si existe o no grado de conexión.
+
+        Set<Persona> personasVisitadas = new HashSet<>();
+        Queue<Persona> colaPersonas = new LinkedList<>();
+
+        Persona siguientePersona = persona;
+        boolean amigoEncontrado = false;
+
+        personasVisitadas.add(persona);//Añado la persona de inicio para que no la procese cuando sea amigo de sus amigos.
+
+        bucleGlobal:
+        while (siguientePersona != null) {
+
+            for (Persona amigo : getAmigos(siguientePersona)) {
+
+                if (amigo.equals(otraPersona)) {//hay coincidencia con el amigo al que queremos llegar?
+                    amigoEncontrado = true;
+                    break bucleGlobal;
+                }
+
+                if (!personasVisitadas.contains(amigo)) {
+
+                    personasVisitadas.add(amigo);//Se añade al set para no volver a visitarlo en el caso de que tengan otro amigo en común
+                    colaPersonas.offer(amigo);//Se añaden a la cola para poder sacar sus amigos después
+                }
+            }
+            siguientePersona = colaPersonas.poll();
+        }
+        return amigoEncontrado;
     }
 
-    public SortedSet<Persona> gradodeConexion(Persona p1, Persona p2) {
-        return null;
-    }
 
 }
